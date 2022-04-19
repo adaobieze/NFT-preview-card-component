@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+$Soft-blue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$dark-blue1: hsl(217, 54%, 11%);
+$dark-blue2: hsl(216, 50%, 16%);
+$dark-blue3: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Outfit', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-color: $dark-blue1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    & #card {
+        background-color: $dark-blue2;
+        width: 30%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        color: $White;
+        align-self: center;
+        border-radius: 5%;
+        padding: 2%;
+        margin: auto 0;
+
+        & #main-image {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            & img {
+                width: 98%;
+                height: auto;
+                object-fit: contain;
+                padding: 1% 0;                
+            }
+
+            .view {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                background-color: hsla(178, 100%, 50%, 0.3);
+                display: flex;   
+                justify-content: center;
+                align-content: center;    
+                
+                &:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+                
+                & img {
+                    width: 100%;
+                    align-self: center;
+                }
+            }
+
+        }
+      
+
+        & h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $White;
+            padding: 2% 0;
+
+            &:hover {
+                color: $Cyan;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $dark-blue3;
+            padding: 2% 0;
+        }
+
+        & #icons, #icons>div {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 3% 0;
+            
+
+            & span{
+                color: $Cyan;
+                padding-left: 0.5vw;
+                font-size: 1rem;
+            }
+
+            & div+div span {
+                color: $dark-blue3;
+                font-weight: 400;
+            }
+        }
+        
+        & #creator-details {
+            display: flex;
+            justify-content: flex-start;
+            align-content: flex-end;
+            color: $dark-blue3;
+            font-size: 1.1rem;
+            border-top: 1px $dark-blue3 solid;
+            padding-top: 5%;
+            
+            & img {
+                width: 10%;
+                border: 1px solid $White;
+                border-radius: 50%;                
+            }
+
+            & span {
+                padding-left: 5%;
+                align-self: center;
+
+                & a {
+                    color: $White;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $Cyan;
+                    }
+                }
+            }
+           
+        }
+    }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        color: $White;
+    }
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    body #card {
+        width: 80%;
+        height: auto;
+
+        & h1 {
+            font-size: 2rem;
+        }
+
+        & p {
+            font-size: 1.2rem;            
+        }
+
+        & #creator-details {
+            font-size: 1rem;
+        }
+    }  
+}
+

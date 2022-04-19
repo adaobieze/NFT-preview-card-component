@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Outfit', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  background-color: #0d192b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body #card {
+  background-color: #14253d;
+  width: 30%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: white;
+  align-self: center;
+  border-radius: 5%;
+  padding: 2%;
+  margin: auto 0;
+}
+
+body #card #main-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+body #card #main-image img {
+  width: 98%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 1% 0;
+}
+
+body #card #main-image .view {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 255, 247, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body #card #main-image .view:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+body #card #main-image .view img {
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body #card h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  padding: 2% 0;
+}
+
+body #card h1:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+body #card p {
+  font-size: 1.2rem;
+  color: #2f415b;
+  padding: 2% 0;
+}
+
+body #card #icons, body #card #icons > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 3% 0;
+}
+
+body #card #icons span, body #card #icons > div span {
+  color: #00fff7;
+  padding-left: 0.5vw;
+  font-size: 1rem;
+}
+
+body #card #icons div + div span, body #card #icons > div div + div span {
+  color: #2f415b;
+  font-weight: 400;
+}
+
+body #card #creator-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  color: #2f415b;
+  font-size: 1.1rem;
+  border-top: 1px #2f415b solid;
+  padding-top: 5%;
+}
+
+body #card #creator-details img {
+  width: 10%;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+body #card #creator-details span {
+  padding-left: 5%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body #card #creator-details span a {
+  color: white;
+  text-decoration: none;
+}
+
+body #card #creator-details span a:hover {
+  color: #00fff7;
+}
+
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+body .attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 375px) {
+  body #card {
+    width: 80%;
+    height: auto;
+  }
+  body #card h1 {
+    font-size: 2rem;
+  }
+  body #card p {
+    font-size: 1.2rem;
+  }
+  body #card #creator-details {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
